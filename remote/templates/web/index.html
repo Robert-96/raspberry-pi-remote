@@ -1,0 +1,78 @@
+{% import 'icons.html' as icons %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="space-y-10 text-rose-600">
+    <div class="flex flex-col items-center justify-center font-light">
+      <span class="block upper">Mode:</span>
+      <h1 id="title" class="block text-4xl font-extrabold">YouTube</h1>
+    </div>
+
+    <div class="flex items-center justify-center space-x-3 px-5 text-rose-600">
+      <button id="skip-back" class="button" onclick="run('skip-back')">
+        {{ icons.skip_back(class="w-12 h-12 md:w-16 md:h-16 hover:text-white") }}
+      </button>
+
+      <button id="fast-rewind" class="button" onclick="run('fast-rewind')">
+        {{ icons.fast_rewind(class="w-12 h-12 md:w-16 md:h-16 hover:text-white") }}
+      </button>
+
+      <button id="rewind" class="button" onclick="run('rewind')">
+        {{ icons.rewind(class="w-12 h-12 md:w-16 md:h-16 hover:text-white") }}
+      </button>
+
+      <button id="play" onclick="play()" class="button border-4 border-rose-600 rounded-full p-3 hover:text-white hover:border-white">
+        {{ icons.play(class="w-10 h-10 md:w-20 md:h-20") }}
+        {{ icons.pause(class="w-10 h-10 md:w-20 md:h-20 hidden") }}
+      </button>
+
+      <button id="forward" class="button" onclick="run('forward')">
+        {{ icons.forward(class="w-12 h-12 md:w-16 md:h-16 hover:text-white") }}
+      </button>
+
+      <button id="fast-forward" class="button" onclick="run('fast-forward')">
+        {{ icons.fast_forward(class="w-12 h-12 md:w-16 md:h-16 hover:text-white") }}
+      </button>
+
+      <button id="skip-forward" class="button" onclick="run('skip-forward')">
+        {{ icons.skip_forward(class="w-12 h-12 md:w-16 md:h-16 hover:text-white") }}
+      </button>
+    </div>
+
+    <div class="flex items-center justify-center space-x-3">
+      <button id="mute" class="button" onclick="run('mute')">
+        {{ icons.mute(class="w-10 h-10 hover:text-white") }}
+      </button>
+
+      <button id="volume-down" class="button" onclick="run('volume-down')">
+        {{ icons.volume_down(class="w-10 h-10 hover:text-white") }}
+      </button>
+
+      <button id="volume-up" class="button" onclick="run('volume-up')">
+        {{ icons.volume_up(class="w-10 h-10 hover:text-white") }}
+      </button>
+
+      <button id="captions" class="button" onclick="run('caption')">
+        {{ icons.captions(class="w-10 h-10 hover:text-white") }}
+      </button>
+
+      <button id="fullscreen" class="button" onclick="fullscreen()">
+        {{ icons.enter_fullscreen(class="w-10 h-10 hover:text-white") }}
+        {{ icons.exit_fullscreen(class="w-10 h-10 hover:text-white hidden") }}
+      </button>
+    </div>
+
+    <div class="text-center font-light">
+      <ul class="flex flex-wrap items-center justify-center ">
+        {% for mode in modes %}
+          <li class="bg-rose-600 text-gray-900 rounded-2xl px-3 py-1 m-3">
+            <button onclick="setMode('{{ mode.name }}')">
+              {{ mode.name }}
+            </button>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,136 @@
+{% macro play(class='h-6 w-6', id='play-icon') -%}
+<svg xmlns="http://www.w3.org/2000/svg" id="{{ id }}" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 4v16l13 -8z" />
+</svg>
+{%- endmacro %}
+
+
+{% macro pause(class='h-6 w-6', id='pause-icon') -%}
+<svg xmlns="http://www.w3.org/2000/svg" id="{{ id }}" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="6" y="5" width="4" height="14" rx="1" />
+  <rect x="14" y="5" width="4" height="14" rx="1" />
+</svg>
+{%- endmacro %}
+
+
+{% macro rewind(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18 15l-6 -6l-6 6h12" transform="rotate(270 12 12)" />
+</svg>
+{%- endmacro %}
+
+
+{% macro fast_rewind(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M21 5v14l-8 -7z" />
+  <path d="M10 5v14l-8 -7z" />
+</svg>
+{%- endmacro %}
+
+
+{% macro forward(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18 15l-6 -6l-6 6h12" transform="rotate(90 12 12)" />
+</svg>
+{%- endmacro %}
+
+
+{% macro fast_forward(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5v14l8 -7z" />
+  <path d="M14 5v14l8 -7z" />
+</svg>
+{%- endmacro %}
+
+
+{% macro skip_back(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 5v14l-12 -7z" />
+  <line x1="4" y1="5" x2="4" y2="19" />
+</svg>
+{%- endmacro %}
+
+
+{% macro skip_forward(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5v14l12 -7z" />
+  <line x1="20" y1="5" x2="20" y2="19" />
+</svg>
+{%- endmacro %}
+
+
+{% macro mute(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
+  <path d="M16 10l4 4m0 -4l-4 4" />
+</svg>
+{%- endmacro %}
+
+
+{% macro volume_up(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M15 8a5 5 0 0 1 0 8" />
+  <path d="M17.7 5a9 9 0 0 1 0 14" />
+  <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
+</svg>
+{%- endmacro %}
+
+
+{% macro volume_down(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M15 8a5 5 0 0 1 0 8" />
+  <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
+</svg>
+{%- endmacro %}
+
+
+{% macro captions(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
+</svg>
+{%- endmacro %}
+
+
+{% macro enter_fullscreen(class='h-6 w-6', id='enter-fullscreen') -%}
+<svg xmlns="http://www.w3.org/2000/svg" id="{{ id }}" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 8v-2a2 2 0 0 1 2 -2h2" />
+  <path d="M4 16v2a2 2 0 0 0 2 2h2" />
+  <path d="M16 4h2a2 2 0 0 1 2 2v2" />
+  <path d="M16 20h2a2 2 0 0 0 2 -2v-2" />
+</svg>
+{%- endmacro %}
+
+
+{% macro exit_fullscreen(class='h-6 w-6', id='exit-fullscreen') -%}
+<svg xmlns="http://www.w3.org/2000/svg" id="{{ id }}" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M15 19v-2a2 2 0 0 1 2 -2h2" />
+  <path d="M15 5v2a2 2 0 0 0 2 2h2" />
+  <path d="M5 15h2a2 2 0 0 1 2 2v2" />
+  <path d="M5 9h2a2 2 0 0 0 2 -2v-2" />
+</svg>
+{%- endmacro %}
+
+
+{% macro captions(class='h-6 w-6') -%}
+<svg xmlns="http://www.w3.org/2000/svg" class="{{ class }}" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="4" y1="20" x2="7" y2="20" />
+  <line x1="14" y1="20" x2="21" y2="20" />
+  <line x1="6.9" y1="15" x2="13.8" y2="15" />
+  <line x1="10.2" y1="6.3" x2="16" y2="20" />
+  <polyline points="5 20 11 4 13 4 20 20" />
+</svg>
+{%- endmacro %}

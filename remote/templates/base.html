@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Raspberry Pi | Remote Controller</title>
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='icons/favicon.svg') }}">
+
+  <script src="https://cdn.tailwindcss.com/3.0.24"></script>
+</head>
+<body class="font-sans">
+  <div class="bg-gradient-to-r from-gray-900 to-gray-800 h-screen w-screen pt-10">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
